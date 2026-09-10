@@ -17,6 +17,10 @@ public class RoomTopDownPlayerMovement : MonoBehaviour
     [Tooltip("不指定时会自动使用 Main Camera。WASD 会按照这个相机画面的上下左右方向移动。")]
     public Camera movementCamera;
 
+    [Header("First Person")]
+    [Tooltip("启用后，WASD 以玩家自身朝向为前后左右（偏航由鼠标控制），不再跟随俯视相机方向，也不会朝移动方向旋转。")]
+    [SerializeField] private bool firstPersonMode;
+
     [Header("Rotation")]
     public bool rotateToMoveDirection = true;
     [Min(0f)]
@@ -154,7 +158,7 @@ public class RoomTopDownPlayerMovement : MonoBehaviour
 
         UpdateFootsteps(isMoving);
 
-        if (rotateToMoveDirection && isMoving)
+        if (!firstPersonMode && rotateToMoveDirection && isMoving)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(
@@ -394,23 +398,34 @@ public class RoomTopDownPlayerMovement : MonoBehaviour
 
     private Vector3 GetWorldMoveDirection(Vector2 moveInput)
     {
-        Vector3 screenUp = Vector3.forward;
-        Vector3 screenRight = Vector3.right;
+        Vector3 screenUp;
+        Vector3 screenRight;
 
-        if (movementCamera != null)
+        if (firstPersonMode)
         {
-            screenUp = Vector3.ProjectOnPlane(movementCamera.transform.up, Vector3.up);
-            screenRight = Vector3.ProjectOnPlane(movementCamera.transform.right, Vector3.up);
+            screenUp = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
+            screenRight = Vector3.ProjectOnPlane(transform.right, Vector3.up);
+        }
+        else
+        {
+            screenUp = Vector3.forward;
+            screenRight = Vector3.right;
 
-            if (screenUp.sqrMagnitude <= 0.0001f)
+            if (movementCamera != null)
             {
-                screenUp = Vector3.forward;
+                screenUp = Vector3.ProjectOnPlane(movementCamera.transform.up, Vector3.up);
+                screenRight = Vector3.ProjectOnPlane(movementCamera.transform.right, Vector3.up);
             }
+        }
 
-            if (screenRight.sqrMagnitude <= 0.0001f)
-            {
-                screenRight = Vector3.right;
-            }
+        if (screenUp.sqrMagnitude <= 0.0001f)
+        {
+            screenUp = Vector3.forward;
+        }
+
+        if (screenRight.sqrMagnitude <= 0.0001f)
+        {
+            screenRight = Vector3.right;
         }
 
         screenUp.Normalize();

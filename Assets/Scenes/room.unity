@@ -1,15 +1,17 @@
 %YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
+%TAG !u! tag:yousandi.cn,2023:
 --- !u!29 &1
 OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_OcclusionBakeSettings:
-    smallestOccluder: 5
-    smallestHole: 0.25
-    backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
+  serializedVersion: 3
   m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionEnabled: 0
+  m_DisplayOccluded: 0
+  m_SceneDepthBufferWidth: 512
+  m_SceneDepthBufferHeight: 512
+  m_ShadowDepthBufferWidth: 512
+  m_ShadowDepthBufferHeight: 512
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -71,7 +73,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -463,10 +465,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 42471137}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,10 +497,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 55022188}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,10 +537,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 57567094}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -910,13 +915,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 94387760}
   - component: {fileID: 94387763}
   - component: {fileID: 94387762}
   - component: {fileID: 94387761}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: FaceCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1052,6 +1058,8 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_enableGDRP: 1
+  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
   m_OcclusionCulling: 0
@@ -1131,12 +1139,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 100226247}
   - component: {fileID: 100226248}
   - component: {fileID: 100226249}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,13 +1710,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 125323089}
   - component: {fileID: 125323092}
   - component: {fileID: 125323091}
   - component: {fileID: 125323090}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,6 +1778,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1793,6 +1807,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &125323092
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2087,7 +2102,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 164666919}
   - component: {fileID: 164666918}
@@ -2095,6 +2110,7 @@ GameObject:
   - component: {fileID: 164666916}
   - component: {fileID: 164666915}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2178,6 +2194,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2203,6 +2223,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &164666918
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2364,10 +2385,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 185872615}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Light_Objects_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2404,10 +2426,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 191638855}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: WashingTablePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,10 +2794,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 223398670}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Walls_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2894,7 +2918,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 227617250}
   - component: {fileID: 227617249}
@@ -2902,6 +2926,7 @@ GameObject:
   - component: {fileID: 227617247}
   - component: {fileID: 227617251}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2947,6 +2972,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2972,6 +3001,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &227617249
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3039,10 +3069,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 236912331}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: interactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4035,7 +4066,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 313330466}
   - component: {fileID: 313330465}
@@ -4043,6 +4074,7 @@ GameObject:
   - component: {fileID: 313330463}
   - component: {fileID: 313330462}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4126,6 +4158,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4151,6 +4187,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &313330465
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4180,11 +4217,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 315136621}
   - component: {fileID: 315136620}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4253,6 +4291,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_UseOcclusionCulling: 1
 --- !u!4 &315136621
 Transform:
   m_ObjectHideFlags: 0
@@ -4430,13 +4469,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 331068205}
   - component: {fileID: 331068208}
   - component: {fileID: 331068207}
   - component: {fileID: 331068206}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4497,6 +4537,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4522,6 +4566,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &331068208
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4882,13 +4927,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 352247185}
   - component: {fileID: 352247188}
   - component: {fileID: 352247187}
   - component: {fileID: 352247186}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4949,6 +4995,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4974,6 +5024,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &352247188
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4988,13 +5039,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 352848068}
   - component: {fileID: 352848071}
   - component: {fileID: 352848070}
   - component: {fileID: 352848069}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5055,6 +5107,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5080,6 +5136,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &352848071
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5988,11 +6045,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 393224272}
   - component: {fileID: 393224271}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Post
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6247,13 +6305,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 420285103}
   - component: {fileID: 420285106}
   - component: {fileID: 420285105}
   - component: {fileID: 420285104}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6314,6 +6373,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6339,6 +6402,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &420285106
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6707,10 +6771,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 456763018}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: 'Medicine bottle_garbage can '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7458,12 +7523,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 507283943}
   - component: {fileID: 507283942}
   - component: {fileID: 507283941}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7592,10 +7658,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 510146301}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Medicine bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7690,10 +7757,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 516229092}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8164,10 +8232,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 541256149}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Medicine bottle_garbage can  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8752,10 +8821,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 590221788}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9158,13 +9228,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 625422535}
   - component: {fileID: 625422538}
   - component: {fileID: 625422537}
   - component: {fileID: 625422536}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9225,6 +9296,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9250,6 +9325,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &625422538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10124,13 +10200,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 691357729}
   - component: {fileID: 691357732}
   - component: {fileID: 691357731}
   - component: {fileID: 691357730}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10191,6 +10268,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10216,6 +10297,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &691357732
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10374,11 +10456,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 714457864}
   - component: {fileID: 714457863}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: MirrorReflectionCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10431,6 +10514,8 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_enableGDRP: 1
+  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
   m_OcclusionCulling: 0
@@ -10601,7 +10686,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 735182895}
   - component: {fileID: 735182894}
@@ -10609,6 +10694,7 @@ GameObject:
   - component: {fileID: 735182892}
   - component: {fileID: 735182891}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10692,6 +10778,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10717,6 +10807,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &735182894
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11105,10 +11196,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 795155729}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11202,10 +11294,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 804713039}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Floor_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13161,10 +13254,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 982972892}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Light_Objects_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13278,10 +13372,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 983933697}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13507,10 +13602,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 993915766}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Medicine bottle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13764,10 +13860,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1001048042}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Props_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14006,10 +14103,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1002164238}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: SceneTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14874,12 +14972,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1075904604}
   - component: {fileID: 1075904606}
   - component: {fileID: 1075904605}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15086,7 +15185,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1076365374}
   - component: {fileID: 1076365373}
@@ -15094,6 +15193,7 @@ GameObject:
   - component: {fileID: 1076365371}
   - component: {fileID: 1076365370}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15177,6 +15277,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15202,6 +15306,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1076365373
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15643,13 +15748,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1132081937}
   - component: {fileID: 1132081940}
   - component: {fileID: 1132081939}
   - component: {fileID: 1132081938}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15710,6 +15816,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15735,6 +15845,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1132081940
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15749,7 +15860,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1136385243}
   - component: {fileID: 1136385242}
@@ -15757,6 +15868,7 @@ GameObject:
   - component: {fileID: 1136385244}
   - component: {fileID: 1136385245}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Camera1
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -15802,9 +15914,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.05
   far clip plane: 100
-  field of view: 33.2
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -15817,6 +15929,8 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_enableGDRP: 1
+  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
   m_OcclusionCulling: 1
@@ -15830,12 +15944,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136385240}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4304593, y: -0.56098557, z: 0.4304593, w: 0.56098557}
-  m_LocalPosition: {x: -46.399, y: 38.872, z: 71.43}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2079483091}
+  m_Father: {fileID: 4329470997362054}
   m_LocalEulerAnglesHint: {x: 75, y: -90, z: 0}
 --- !u!114 &1136385244
 MonoBehaviour:
@@ -15904,7 +16018,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136385240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01bfd2225effb5d47b6a5d082fbef3f5, type: 3}
   m_Name: 
@@ -16724,10 +16838,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1182285178}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Walls_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17261,7 +17376,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1212706848}
   - component: {fileID: 1212706847}
@@ -17269,6 +17384,7 @@ GameObject:
   - component: {fileID: 1212706845}
   - component: {fileID: 1212706844}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17352,6 +17468,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17377,6 +17497,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1212706847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17900,7 +18021,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1281381251}
   - component: {fileID: 1281381250}
@@ -17908,6 +18029,7 @@ GameObject:
   - component: {fileID: 1281381248}
   - component: {fileID: 1281381247}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17991,6 +18113,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18016,6 +18142,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1281381250
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18267,10 +18394,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1296777587}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: drug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18371,10 +18499,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1310566756}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: First
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18474,13 +18603,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1312354336}
   - component: {fileID: 1312354339}
   - component: {fileID: 1312354338}
   - component: {fileID: 1312354337}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18541,6 +18671,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18566,6 +18700,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1312354339
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19129,11 +19264,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1383408313}
   - component: {fileID: 1383408314}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: drugMode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19326,10 +19462,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1393102974}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Medicine bottle_garbage can  (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19436,7 +19573,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1408748845}
   - component: {fileID: 1408748850}
@@ -19445,6 +19582,7 @@ GameObject:
   - component: {fileID: 1408748847}
   - component: {fileID: 1408748846}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: PromptUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19578,10 +19716,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1419157190}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19831,13 +19970,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1425866363}
   - component: {fileID: 1425866366}
   - component: {fileID: 1425866365}
   - component: {fileID: 1425866364}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19973,6 +20113,8 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_enableGDRP: 1
+  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
   m_OcclusionCulling: 0
@@ -20419,10 +20561,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1445458830}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Floor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21443,10 +21586,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1486781259}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Props_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21623,6 +21767,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a71f826bc88335840a70a9ca73162a8f, type: 3}
   m_PrefabInstance: {fileID: 1487357861}
   m_PrefabAsset: {fileID: 0}
+--- !u!134 &1492059543
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  dynamicFriction: 0.6
+  staticFriction: 0.6
+  bounciness: 0
+  frictionCombine: 0
+  bounceCombine: 0
 --- !u!1001 &1499800560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21851,13 +22007,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1530747718}
   - component: {fileID: 1530747721}
   - component: {fileID: 1530747720}
   - component: {fileID: 1530747719}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21918,6 +22075,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21943,6 +22104,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1530747721
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22257,10 +22419,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1542883768}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22354,13 +22517,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1558096516}
   - component: {fileID: 1558096519}
   - component: {fileID: 1558096518}
   - component: {fileID: 1558096517}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22421,6 +22585,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22446,6 +22614,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &1558096519
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22724,11 +22893,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1601066885}
   - component: {fileID: 1601066886}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Washing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23252,10 +23422,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1627007389}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24085,13 +24256,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1698932721}
   - component: {fileID: 1698932720}
   - component: {fileID: 1698932719}
   - component: {fileID: 1698932718}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: WordCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25794,12 +25966,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1855491178}
   - component: {fileID: 1855491180}
   - component: {fileID: 1855491179}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: PromptUIText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26916,13 +27089,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1953757732}
   - component: {fileID: 1953757731}
   - component: {fileID: 1953757730}
   - component: {fileID: 1953757729}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27085,6 +27259,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_UseOcclusionCulling: 1
 --- !u!4 &1953757732
 Transform:
   m_ObjectHideFlags: 0
@@ -27332,11 +27507,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1973980907}
   - component: {fileID: 1973980908}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: WashingTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28649,7 +28825,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2025791736}
   - component: {fileID: 2025791735}
@@ -28657,6 +28833,7 @@ GameObject:
   - component: {fileID: 2025791733}
   - component: {fileID: 2025791732}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Fog_Room_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28740,6 +28917,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -28765,6 +28946,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &2025791735
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28860,13 +29042,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2029263909}
   - component: {fileID: 2029263912}
   - component: {fileID: 2029263911}
   - component: {fileID: 2029263910}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28927,6 +29110,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -28952,6 +29139,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &2029263912
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28966,13 +29154,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2035390973}
   - component: {fileID: 2035390976}
   - component: {fileID: 2035390975}
   - component: {fileID: 2035390974}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29033,6 +29222,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29058,6 +29251,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &2035390976
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29410,10 +29604,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2079483091}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29432,8 +29627,7 @@ Transform:
   m_LocalPosition: {x: 54.39, y: -28.048355, z: -66.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1136385243}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2087967350
@@ -29586,13 +29780,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2118784313}
   - component: {fileID: 2118784316}
   - component: {fileID: 2118784315}
   - component: {fileID: 2118784314}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29653,6 +29848,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29678,6 +29877,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &2118784316
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29692,13 +29892,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2119456235}
   - component: {fileID: 2119456238}
   - component: {fileID: 2119456237}
   - component: {fileID: 2119456236}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29759,6 +29960,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29784,6 +29989,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!33 &2119456238
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29930,11 +30136,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2147001001}
   - component: {fileID: 2147001002}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: RoomItemInspectOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30025,6 +30232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomHansSuite
       objectReference: {fileID: 0}
+    - target: {fileID: 4090246187084582373, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1492059543}
     - target: {fileID: 4232013382368083052, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.9
@@ -30070,6 +30281,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8125951110656847373, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
+      propertyPath: firstPersonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125951110656847373, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
       propertyPath: footstepInterval
       value: 0.55
       objectReference: {fileID: 0}
@@ -30091,11 +30306,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4232013382368083052, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1136385243}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1722914143484309423, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088347240085930214}
+    - targetCorrespondingSourceObject: {fileID: 1722914143484309423, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088347240085930216}
   m_SourcePrefab: {fileID: 100100000, guid: d805982bf9da392488a138ce0c1a1028, type: 3}
 --- !u!1 &2088347240085930213 stripped
 GameObject:
@@ -30109,7 +30330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088347240085930213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7451da7865a9c345b68b48592166d60, type: 3}
   m_Name: 
@@ -30130,6 +30351,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3030e355f26bf840b41ba691ab28ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2088347240085930216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088347240085930213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2861709ee4248a1b8b39f0653560bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawTransform: {fileID: 4329470997362054}
+  pitchTransform: {fileID: 1136385243}
+  interactionCamera: {fileID: 1136385242}
+  mouseSensitivity: 2
+  horizontalAngleLimit: 180
+  verticalAngleLimits: {x: -60, y: 60}
+  invertVerticalLook: 0
+  interactionDistance: 3
+  interactionLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  triggerInteraction: 1
+  interactionKey: 101
+  promptUI: {fileID: 0}
+  autoFindPromptUI: 1
+  reticleImage: {fileID: 0}
+  createReticleAutomatically: 1
+  reticleSize: {x: 6, y: 6}
+  idleReticleColor: {r: 1, g: 1, b: 1, a: 0.8}
+  targetReticleColor: {r: 0.25, g: 1, b: 0.65, a: 1}
+  reticleSortingOrder: 1000
+  lockCursorOnEnable: 1
+  clickGameViewToRelock: 1
+  unlockCursorKey: 27
+  restoreCursorStateOnDisable: 1
 --- !u!33 &8160103458507344578
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30155,6 +30413,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_virtualGeometry: 0
+  m_ShadingRate: 0
+  m_ForceDisableGRD: 0
+  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -30180,6 +30442,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+  m_MaskInteraction: 0
 --- !u!4 &8160103458510211810
 Transform:
   m_ObjectHideFlags: 0
@@ -30201,13 +30464,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 8160103458510211810}
   - component: {fileID: 8160103458507344578}
   - component: {fileID: 8160103458508441602}
   - component: {fileID: 9037489665006477784}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: ShowerTable_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

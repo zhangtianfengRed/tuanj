@@ -1,0 +1,17 @@
+{
+    "name": "EnoxSoftware.DlibFaceLandmarkDetectorExample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7166fda719c99694d9297ead935e2a9d",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

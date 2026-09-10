@@ -43,3 +43,11 @@ sysinfo.txt
 crashlytics-build.properties
 report.xml
 
+# Codely CLI working directories (large, machine-local)
+.codely-cli/
+.codely.packages/
+.codely/
+
+# Codely bridge runtime heartbeat (machine/session state)
+.com-unity-codely.json
+
